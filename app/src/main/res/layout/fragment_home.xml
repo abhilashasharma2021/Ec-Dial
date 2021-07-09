@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFrag">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/purple_200"
+        android:layout_height="50dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="15dp"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="5dp"
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:src="@drawable/menublue"
+                app:tint="@color/purple_200"
+                android:layout_centerVertical="true"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivSearch"
+            android:padding="3dp"
+            android:src="@drawable/search"
+            android:layout_toLeftOf="@+id/ivCart"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivCart"
+            android:padding="3dp"
+            android:src="@drawable/cart"
+            app:tint="@color/white"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/hello_blank_fragment" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

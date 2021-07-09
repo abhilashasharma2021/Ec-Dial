@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:id="@+id/txCatName"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/ralewayeemibold"
+            android:text="Deal Of The day" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ivPlus"
+            android:padding="3dp"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/txCatName"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/discount"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@+id/ivPlus"
+            android:background="@color/grey_light"/>
+    </RelativeLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

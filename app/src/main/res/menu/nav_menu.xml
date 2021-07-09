@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/category"
+        android:icon="@drawable/category"
+        android:title="@string/all_categories"/>
+
+
+    <item
+        android:id="@+id/offers"
+        android:icon="@drawable/offer"
+        android:title="@string/all_offers"/>
+
+
+    <item
+        android:id="@+id/order"
+
+        android:icon="@drawable/checklist"
+        android:title="@string/all_my_orders"/>
+
+    <item
+        android:id="@+id/wishlist"
+
+        android:icon="@drawable/wishlist"
+        android:title="@string/my_wishlist"/>
+
+    <item
+        android:id="@+id/help"
+
+        android:icon="@drawable/help"
+        android:title="@string/help"/>
+
+
+    <item
+        android:id="@+id/privacy"
+
+        android:icon="@drawable/privacy"
+        android:title="@string/privacy_policy"/>
+
+    <item
+        android:id="@+id/contact"
+
+        android:icon="@drawable/contact"
+        android:title="@string/contact_us"/>
+
+    <item
+        android:id="@+id/about"
+
+        android:icon="@drawable/about"
+        android:title="@string/about_us"/>
+    <item
+        android:id="@+id/logout"
+
+        android:icon="@drawable/logout"
+        android:title="@string/logout"/>
+
+</menu>

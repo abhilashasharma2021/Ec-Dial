@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AllCategoryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/purple_200"
+        android:layout_height="50dp">
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivBack"
+            android:padding="3dp"
+            android:src="@drawable/back"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/ivBack"
+            android:fontFamily="@font/ralewayeemibold"
+            android:text="@string/all_category"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivSearch"
+            android:padding="3dp"
+            android:src="@drawable/search"
+            android:layout_toLeftOf="@+id/ivCart"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivCart"
+            android:padding="3dp"
+            android:src="@drawable/cart"
+            app:tint="@color/white"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp" />
+
+
+    </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_margin="10dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_height="130dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+
+                    android:src="@drawable/fashion"
+                    android:id="@+id/ivCat" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:id="@+id/txCatName"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Fashion" />
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

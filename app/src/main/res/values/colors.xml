@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#262262</color>
+    <color name="purple_500">#262262</color>
+    <color name="purple_700">#262262</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#f26522</color>
+    <color name="viewgrey">#dbdbdb</color>
+    <color name="filpcartcolor">#047BD5</color>
+    <color name="grey_light">#BF333333</color>
+    <color name="grey">#B9BEC8</color>
+</resources>

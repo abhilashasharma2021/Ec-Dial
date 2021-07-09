@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterWithMobileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/purple_200"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="3dp"
+            android:id="@+id/ivCancle"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/cross"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:fontFamily="@font/robotobold"
+            android:text="Login" />
+
+
+    </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="@string/log_in_for_the_best_experience" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_light"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="@string/experience_the_all_new_ec_dial" />
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        android:layout_toRightOf="@+id/ccp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="25dp"
+                        app:boxBackgroundColor="@color/white"
+                        android:hint="@string/phone_number">
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textSize="14sp"
+                            android:maxLength="10"
+                            android:fontFamily="@font/robotoregular"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple_200"
+                    android:textSize="12sp"
+                    android:id="@+id/txEmail"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="@string/use_email_id" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_light"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:id="@+id/txTerm"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="@string/term" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/txTerm"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp"
+
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/tx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="and" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/filpcartcolor"
+                            android:textSize="12sp"
+                            android:layout_toRightOf="@+id/tx"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/txPrivacy"
+                            android:fontFamily="@font/robotobold"
+                            android:text="Privacy Policy" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_marginTop="20sp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/orange"
+        app:cornerRadius="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"
+        android:text="@string/con_tinue"
+        android:id="@+id/btnSave">
+
+    </com.google.android.material.button.MaterialButton>
+</RelativeLayout>
