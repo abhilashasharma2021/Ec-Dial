@@ -35,6 +35,8 @@
 
             android:layout_height="wrap_content"
             android:background="@color/orange"
+
+
             app:itemIconTint="@drawable/nav_item"
             app:itemTextColor="@drawable/nav_item"
             app:menu="@menu/bottom_menu_home" />
