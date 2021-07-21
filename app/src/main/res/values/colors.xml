@@ -10,6 +10,8 @@
     <color name="orange">#f26522</color>
     <color name="viewgrey">#dbdbdb</color>
     <color name="filpcartcolor">#047BD5</color>
+    <color name="cart">#83C5F6</color>
     <color name="grey_light">#BF333333</color>
+    <color name="ash">#2b2a2a</color>
     <color name="grey">#B9BEC8</color>
 </resources>

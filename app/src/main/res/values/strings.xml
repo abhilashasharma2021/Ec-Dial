@@ -15,7 +15,7 @@
     <string name="cart">Cart</string>
     <string name="shop">Shop</string>
     <string name="all_categories">All Categories</string>
-    <string name="all_offers">Offer Zone</string>
+    <string name="all_offers">Today Deals</string>
     <string name="all_my_orders">My Orders</string>
     <string name="help">Help</string>
     <string name="logout">Logout</string>
@@ -31,4 +31,16 @@
     <string name="offer_zone">Offer Zone</string>
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="resend_otp">Resend Otp</string>
+    <string name="store_locater">Store Locater</string>
+    <string name="brands">Brands</string>
+    <string name="save">Save</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="service_booking">Service Booking</string>
+    <string name="enter_your_name">Enter your Full Name</string>
+    <string name="enter_your_mobile_number">Enter your Mobile number</string>
+    <string name="enter_your_email_id">Enter Your Email ID</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="all_brands">All Brands</string>
 </resources>

@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -22,7 +22,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:background="@color/purple_200"
-        android:layout_height="50dp">
+        android:layout_height="110dp">
 
 
         <com.google.android.material.card.MaterialCardView
@@ -30,9 +30,9 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             app:cardCornerRadius="15dp"
-            android:layout_centerVertical="true"
+             android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
             app:cardBackgroundColor="@color/white"
-            android:layout_margin="5dp"
             >
 
             <ImageView
@@ -48,44 +48,199 @@
         </com.google.android.material.card.MaterialCardView>
 
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:padding="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:src="@drawable/logo" />
+
+
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="25dp"
-            android:id="@+id/ivSearch"
+            android:id="@+id/ivNoti"
             android:padding="3dp"
-            android:src="@drawable/search"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/bell"
             android:layout_toLeftOf="@+id/ivCart"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center_vertical"
             app:tint="@color/white" />
         <ImageView
             android:layout_width="35dp"
             android:layout_height="25dp"
             android:id="@+id/ivCart"
             android:padding="3dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/cart"
             app:tint="@color/white"
             android:layout_marginEnd="15dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="15dp" />
+            android:layout_alignParentEnd="true" />
 
 
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+               android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_below="@+id/ivCart"
+                android:layout_height="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/ivSearch"
+                    android:padding="4dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/search" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_light"
+                    android:textSize="13sp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Search for products" />
+
+            </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
     </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvCat"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="6dp">
+
+                <com.smarteist.autoimageslider.SliderView
+
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderCircularHandlerEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/cart"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/txTitle"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Discount for you" />
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="100dp"
+                    android:text="View All"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:layout_height="50dp"></com.google.android.material.button.MaterialButton>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginBottom="10dp"
+                     android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@+id/txTitle"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/card"
+                        android:layout_margin="15dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:src="@drawable/fashion"
+                            android:scaleType="fitXY"
+                            android:id="@+id/ivCat"
+                            android:layout_height="150dp">
+                        </ImageView>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_below="@+id/card"
+                        android:layout_centerInParent="true"
+                        android:textAlignment="center"
+                        android:id="@+id/txCatName"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Dresses and Gowns" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
 
 
 
 
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="@string/hello_blank_fragment" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/banner"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp"
+                android:layout_height="150dp">
+            </ImageView>
+
         </LinearLayout>
 
     </ScrollView>

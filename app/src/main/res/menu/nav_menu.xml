@@ -14,6 +14,20 @@
         android:title="@string/all_offers"/>
 
 
+
+    <item
+        android:id="@+id/brands"
+        android:icon="@drawable/brand"
+        android:title="@string/brands"/>
+    <item
+        android:id="@+id/booking"
+        android:icon="@drawable/booking"
+        android:title="@string/service_booking"/>
+
+    <item
+        android:id="@+id/locator"
+        android:icon="@drawable/storelocator"
+        android:title="@string/store_locater"/>
     <item
         android:id="@+id/order"
 
@@ -34,6 +48,11 @@
 
 
     <item
+        android:id="@+id/terms"
+        android:icon="@drawable/terms"
+        android:title="@string/terms_amp_conditions"/>
+
+    <item
         android:id="@+id/privacy"
 
         android:icon="@drawable/privacy"
@@ -41,13 +60,15 @@
 
     <item
         android:id="@+id/contact"
-
         android:icon="@drawable/contact"
         android:title="@string/contact_us"/>
 
     <item
+        android:id="@+id/disclaimer"
+        android:icon="@drawable/caution"
+        android:title="@string/disclaimer"/>
+    <item
         android:id="@+id/about"
-
         android:icon="@drawable/about"
         android:title="@string/about_us"/>
     <item

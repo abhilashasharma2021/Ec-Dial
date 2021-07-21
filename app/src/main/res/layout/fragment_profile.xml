@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ProfileFrag">
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/g"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/img_Back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/back"
+                    android:layout_marginTop="10dp"
+                    android:background="?actionBarItemBackground"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="-50dp"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_Img"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/girlll">
+
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/cmer"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="-30dp"
+                    android:layout_toEndOf="@id/profile_Img"
+                    android:layout_toRightOf="@id/profile_Img" />
+
+
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txt_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:hint="Mohani Verma"
+                android:gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/robotobold"
+                android:layout_marginTop="10dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#bdbdbd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/img_order"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/order" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Order"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_below="@+id/img_order"
+                        android:layout_centerHorizontal="true"/>
+
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:background="#bdbdbd"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_wishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+
+                    <ImageView
+                        android:id="@+id/img_wish"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/he"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Wishlist"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_below="@+id/img_wish"
+                        android:layout_centerHorizontal="true"/>
+
+
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:background="#bdbdbd"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#bdbdbd"
+                />
+            <TextView
+                android:id="@+id/txt_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/robotoregular"/>
+            <TextView
+                android:id="@+id/txt_pre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You are only update your name,date of birth ,profile image and gender.."
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/robotoregular"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/robotoregular"/>
+
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="center"
+                    android:hint="Mohan Verma"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/robotoregular"/>
+
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="abc@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/robotoregular"/>
+
+                <TextView
+                    android:id="@+id/txt_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+911234567890"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/robotoregular"/>
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/robotoregular"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt5"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
+
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/radio_male"
+                        android:text="Female" />
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="#bdbdbd"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_chnagepass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="@font/robotoregular"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#bdbdbd"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:background="#bdbdbd"
+                />
+
+            <TextView
+                android:id="@+id/txt_billing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Billing Address"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="@font/robotoregular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:background="#bdbdbd"
+                />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="60dp"
+            app:cornerRadius="20dp"
+            android:fontFamily="@font/robotoregular"
+            android:id="@+id/btnNext"
+            android:backgroundTint="@color/orange"
+            android:layout_centerInParent="true"
+            android:text="@string/save">
+
+        </com.google.android.material.button.MaterialButton>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

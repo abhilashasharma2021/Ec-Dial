@@ -53,6 +53,21 @@
                 android:orientation="vertical">
 
 
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="3dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    android:layout_centerVertical="true"/>
+
+
+
+
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,6 +149,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/purple_200"
                     android:textSize="12sp"
+                    android:visibility="gone"
                     android:id="@+id/txEmail"
                     android:layout_gravity="end"
                     android:layout_marginTop="15dp"

@@ -18,9 +18,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ecdial.activity.AllBrandsActivity;
 import com.ecdial.activity.AllCategoryActivity;
 import com.ecdial.activity.PrivacyPolicyActivity;
 import com.ecdial.fragment.HomeFrag;
+import com.ecdial.fragment.ProfileFrag;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -67,14 +69,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
                 }
 
+                else  if (item.getItemId()==R.id.brands){
+                    startActivity(new Intent(MainActivity.this, AllBrandsActivity.class));
+                    drawerlayout.closeDrawer(GravityCompat.START);
 
+
+                }
 
                 return false;
             }
         });
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
         }
 
 
@@ -86,16 +93,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         switch (item.getItemId()) {
 
+            case R.id.nav_cat:
 
-
-            case R.id.category:
-                Toast.makeText(this, "cat", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, AllCategoryActivity.class));
-                Log.e("MainActivity", "cat");
                 drawerlayout.closeDrawer(GravityCompat.START);
                 break;
 
-
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFrag()).commit();
+                drawerlayout.closeDrawer(GravityCompat.START);
+                break;
 
         }
 

@@ -19,12 +19,7 @@ ActivityRegisterOrLoginBinding binding;
 
         binding=ActivityRegisterOrLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.txEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegisterWithMobileActivity.this,RegisterWithEmailActivity.class));
-            }
-        });
+
 
         binding.btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
