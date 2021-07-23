@@ -11,25 +11,22 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EcDial">
-
-
-        <activity android:name=".activity.AllBrandsActivity"
+        android:theme="@style/Theme.EcDial"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.HelpActivity"></activity>
+        <activity
+            android:name=".activity.AllBrandsActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
-
-        <activity android:name=".activity.ChangePasswordActivity"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".activity.ChangePasswordActivity" />
         <activity android:name=".activity.PrivacyPolicyActivity" />
         <activity android:name=".activity.OfferActivity" />
         <activity android:name=".TermsAndConditionActivity" />
         <activity android:name=".activity.OtpVerifyActivity" />
         <activity android:name=".activity.CropImageActivity" />
-
-
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:configChanges="orientation|screenSize"
@@ -49,21 +46,17 @@
         <activity
             android:name=".activity.SplashActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
-
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
     </application>
 
 </manifest>

@@ -47,11 +47,11 @@ RecyclerView rvBrands;
         });
 
 
-       // show_Brands();
+      show_Brands();
 
        swipeRefreshLayout.setOnRefreshListener(() ->swipeRefreshLayout.postDelayed(() -> {
            swipeRefreshLayout .setRefreshing(false);
-         //   show_Brands();
+         show_Brands();
         }, 2000));
 
 
