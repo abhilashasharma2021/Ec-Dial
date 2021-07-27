@@ -142,6 +142,8 @@ public class HomeFrag extends Fragment {
                 });
     }
 
+
+
     private  void show_Category() {
 
         CustomDialog dialog=new CustomDialog();
