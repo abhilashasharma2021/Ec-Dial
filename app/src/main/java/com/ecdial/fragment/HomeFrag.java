@@ -111,6 +111,8 @@ public class HomeFrag extends Fragment {
 
 
         show_Brands();
+
+
         return view;
     }
 
