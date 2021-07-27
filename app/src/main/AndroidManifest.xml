@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcDial"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.HelpActivity"></activity>
+        <activity android:name=".activity.MyWishListActivity"></activity>
+        <activity android:name=".activity.HelpActivity" />
         <activity
             android:name=".activity.AllBrandsActivity"
             android:configChanges="orientation|screenSize"
@@ -56,7 +57,7 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
     </application>
 
 </manifest>

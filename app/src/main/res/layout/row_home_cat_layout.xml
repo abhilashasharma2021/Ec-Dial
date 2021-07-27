@@ -10,17 +10,15 @@
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
-
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:padding="10dp"
-
-            app:cardCornerRadius="30dp">
+            app:cardCornerRadius="40dp">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:src="@drawable/fashion"
-                android:scaleType="centerCrop"
+                android:layout_gravity="center"
                 android:id="@+id/ivCat"
                 android:layout_height="match_parent">
             </ImageView>

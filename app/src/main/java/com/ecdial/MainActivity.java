@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.ecdial.activity.AllBrandsActivity;
 import com.ecdial.activity.AllCategoryActivity;
 import com.ecdial.activity.HelpActivity;
+import com.ecdial.activity.MyWishListActivity;
 import com.ecdial.activity.PrivacyPolicyActivity;
 import com.ecdial.activity.SplashActivity;
 import com.ecdial.fragment.HomeFrag;
@@ -91,6 +92,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     startActivity(new Intent(MainActivity.this, HelpActivity.class));
                     drawerlayout.closeDrawer(GravityCompat.START);
                 }
+
+
+                else  if (item.getItemId()==R.id.wishlist){
+                    startActivity(new Intent(MainActivity.this, MyWishListActivity.class));
+                    drawerlayout.closeDrawer(GravityCompat.START);
+                }
+
 
                 else  if (item.getItemId()==R.id.logout){
                     logout();

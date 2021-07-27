@@ -83,4 +83,9 @@ dependencies {
      //lottie
     implementation 'com.airbnb.android:lottie:3.5.0'
 
+    //animation
+    implementation 'com.github.mohammadatif:Animatoo:master'
+
+
+
 }

@@ -7,20 +7,25 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.ecdial.R;
 import com.ecdial.databinding.RowHomeCatLayoutBinding;
 import com.ecdial.databinding.RowOfferLayoutBinding;
+import com.ecdial.model.AllCategoryResponce;
 import com.ecdial.model.CategoryHome;
 import com.ecdial.model.OfferModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CatHomeAdapter extends RecyclerView.Adapter<CatHomeAdapter.MyViewHolder>{
 
 
     private Context mContext;
-    private ArrayList<CategoryHome> catList;
+    private List<AllCategoryResponce.Datum> catList;
 
-    public CatHomeAdapter(Context mContext, ArrayList<CategoryHome> catList) {
+    public CatHomeAdapter(Context mContext, List<AllCategoryResponce.Datum> catList) {
         this.mContext = mContext;
         this.catList = catList;
     }
@@ -33,19 +38,19 @@ public class CatHomeAdapter extends RecyclerView.Adapter<CatHomeAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        CategoryHome modelObject = catList.get(position);
-        holder.rowHomeCatLayoutBinding.txCatName.setText(modelObject.getCatName());
-        holder.rowHomeCatLayoutBinding.ivCat.setImageResource(modelObject.getCatImage());
+        AllCategoryResponce.Datum modelObject = catList.get(position);
+        holder.rowHomeCatLayoutBinding.txCatName.setText(modelObject.getCategoryName());
 
 
-       /* try {
-            Glide.with(mContext).load(modelObject.getCoursePath() + modelObject.getCourseImage())
-                    .placeholder(R.drawable.dummy).override(250, 250)
+        try {
+            Glide.with(mContext).load(modelObject.getIcon())
+                    .placeholder(R.drawable.fashion).override(250, 250)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(holder.rowOfferBottomShitLayoutBinding.ivCourse);
+                    .into(holder.rowHomeCatLayoutBinding.ivCat);
         } catch (Exception e) {
 
-        }*/
+        }
+
 
 
 
