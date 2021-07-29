@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFrag">
 
 
@@ -17,237 +17,322 @@
             android:orientation="vertical">
 
 
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:background="@color/purple_200"
-        android:layout_height="110dp">
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/menu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            app:cardCornerRadius="15dp"
-             android:layout_marginTop="15dp"
-            android:layout_marginStart="15dp"
-            app:cardBackgroundColor="@color/white"
-            >
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="25dp"
-                android:padding="3dp"
-                android:layout_gravity="center"
-                android:src="@drawable/menublue"
-                app:tint="@color/purple_200"
-                android:layout_centerVertical="true"/>
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:padding="3dp"
-            android:layout_marginTop="15dp"
-            android:layout_centerHorizontal="true"
-            android:background="@color/white"
-            android:src="@drawable/logo" />
-
-
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="25dp"
-            android:id="@+id/ivNoti"
-            android:padding="3dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/bell"
-            android:layout_toLeftOf="@+id/ivCart"
-            app:tint="@color/white" />
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="25dp"
-            android:id="@+id/ivCart"
-            android:padding="3dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/cart"
-            app:tint="@color/white"
-            android:layout_marginEnd="15dp"
-            android:layout_alignParentEnd="true" />
-
-
-        <com.google.android.material.card.MaterialCardView
+            <RelativeLayout
                 android:layout_width="match_parent"
-               android:layout_marginTop="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_below="@+id/ivCart"
-                android:layout_height="40dp">
+                android:layout_height="110dp"
+                android:background="@color/purple_200">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:id="@+id/ivSearch"
-                    android:padding="4dp"
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="15dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/search" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/grey_light"
-                    android:textSize="13sp"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center"
-                    android:fontFamily="@font/robotoregular"
-                    android:text="Search for products" />
+                    android:layout_marginTop="15dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp">
 
-            </LinearLayout>
-
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:padding="3dp"
+                        android:src="@drawable/menublue"
+                        app:tint="@color/purple_200" />
 
 
-            </com.google.android.material.card.MaterialCardView>
-    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:padding="3dp"
+                    android:src="@drawable/logo" />
+
+
+                <ImageView
+                    android:id="@+id/ivNoti"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/ivCart"
+                    android:padding="3dp"
+                    android:src="@drawable/bell"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivCart"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:padding="3dp"
+                    android:src="@drawable/cart"
+                    app:tint="@color/white" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/ivCart"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivSearch"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:padding="4dp"
+                            android:src="@drawable/search" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:fontFamily="@font/robotoregular"
+                            android:gravity="center"
+                            android:hint="Search for products"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:textColor="@color/grey_light"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/menuCat"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginStart="10dp"
-                    app:cardBackgroundColor="@color/purple_200">
+                    android:layout_marginTop="15dp"
+                    app:cardBackgroundColor="@color/purple_200"
+                    app:cardCornerRadius="30dp">
 
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:padding="3dp"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
+                        android:padding="3dp"
                         android:src="@drawable/menublue"
-                        app:tint="@color/white"
-                        android:layout_centerVertical="true"/>
+                        app:tint="@color/white" />
 
 
                 </com.google.android.material.card.MaterialCardView>
 
 
                 <TextView
+                    android:id="@+id/tx"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:id="@+id/tx"
                     android:layout_below="@+id/menuCat"
-                    android:layout_marginTop="10dp"
-                    android:textAlignment="center"
                     android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/robotoregular"
-                    android:text="All \n Category" />
+                    android:text="All \n Category"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCat"
                     android:layout_width="wrap_content"
-                    android:layout_toEndOf="@+id/menuCat"
-                    android:layout_marginStart="10dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rvCat"/>
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/menuCat" />
 
 
             </RelativeLayout>
-
-
-
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:background="@color/orange_light"
-    android:layout_height="wrap_content">
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        app:cardCornerRadius="6dp">
-
-        <com.smarteist.autoimageslider.SliderView
-
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderCircularHandlerEnabled="true"
-            app:sliderIndicatorAnimationDuration="600"
-            app:sliderScrollTimeInSec="1"
-            app:sliderStartAutoCycle="true" />
-
-
-    </com.google.android.material.card.MaterialCardView>
-
-
-</RelativeLayout>
-
-
 
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:background="@color/cart"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/orange_light">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:id="@+id/txTitle"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="@font/robotobold"
-                    android:text="Brand" />
-
-
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="100dp"
-                    android:text="View All"
-                    android:layout_alignParentEnd="true"
-                    android:textSize="12sp"
-                    android:id="@+id/btViewBrand"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="@color/orange"
-                    android:fontFamily="@font/robotoregular"
-                    android:layout_height="50dp"/>
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="5dp">
+
+                    <com.smarteist.autoimageslider.SliderView
+
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderCircularHandlerEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
 
 
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="wrap_content"
-                    android:id="@+id/rvBrand"
-                    android:layout_marginTop="20dp"
-                    android:layout_below="@+id/txTitle"
-                    android:layout_height="wrap_content"/>
+                </com.google.android.material.card.MaterialCardView>
 
 
             </RelativeLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:orientation="vertical">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/robotobold"
+                        android:text="Brand"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btViewBrand"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:backgroundTint="@color/orange"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="View All"
+                        android:textSize="12sp" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txTitle"
+                        android:layout_marginTop="20dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tx2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/robotobold"
+                        android:text="Offer"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btOffer"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:backgroundTint="@color/orange"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="View All"
+                        android:textSize="12sp" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvOffer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tx2"
+                        android:layout_marginTop="20dp" />
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tx1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/robotobold"
+                        android:text="Upcoming"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btUpcoming"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:backgroundTint="@color/orange"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="View All"
+                        android:textSize="12sp" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvUpcoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tx1"
+                        android:layout_marginTop="20dp" />
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

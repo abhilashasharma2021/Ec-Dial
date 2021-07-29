@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/blue_rounded"
+        android:layout_below="@+id/txTitle"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/card"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:src="@drawable/fashion"
+                    android:scaleType="fitXY"
+                    android:id="@+id/ivBrand"
+                    android:layout_height="150dp">
+                </ImageView>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/card"
+                android:textAlignment="center"
+                android:id="@+id/txBrandName"
+                android:fontFamily="@font/robotoregular"
+                android:text="Dresses and Gowns" />
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txBrandName"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/txOfferPrice"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_light"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/txOfferPrice"
+                    android:id="@+id/txSellPrice"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:textSize="13sp"
+                    android:layout_toEndOf="@+id/txSellPrice"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/txOffPercent"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

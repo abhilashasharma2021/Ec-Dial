@@ -55,12 +55,53 @@
                 android:fontFamily="@font/robotoregular"
                 android:text="Dresses and Gowns" />
 
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txBrandName"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/txOfferPrice"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_light"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/txOfferPrice"
+                    android:id="@+id/txSellPrice"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:textSize="13sp"
+                    android:layout_toEndOf="@+id/txSellPrice"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/txOffPercent"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
-
-
-
-
 
 
 

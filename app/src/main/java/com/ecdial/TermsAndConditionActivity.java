@@ -11,13 +11,10 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.ecdial.ProgressBarCustom.CustomDialog;
-import com.ecdial.activity.AllCategoryActivity;
 import com.ecdial.databinding.ActivityTermsAndConditionBinding;
-import com.ecdial.model.AllCategoryResponce;
 import com.ecdial.model.TermsModel;
 import com.ecdial.utils.APIDATA;
 
-import static com.ecdial.utils.APIDATA.show_category;
 import static com.ecdial.utils.APIDATA.terms_Condition;
 
 public class TermsAndConditionActivity extends AppCompatActivity {

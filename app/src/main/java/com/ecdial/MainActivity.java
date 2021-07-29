@@ -1,9 +1,7 @@
 package com.ecdial;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -12,28 +10,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ecdial.activity.AllBrandsActivity;
-import com.ecdial.activity.AllCategoryActivity;
 import com.ecdial.activity.HelpActivity;
 import com.ecdial.activity.MyWishListActivity;
 import com.ecdial.activity.PrivacyPolicyActivity;
 import com.ecdial.activity.SplashActivity;
+import com.ecdial.fragment.AllCategoryFragment;
 import com.ecdial.fragment.HomeFrag;
 import com.ecdial.fragment.ProfileFrag;
-import com.ecdial.sharedhelper.Appconstant;
-import com.ecdial.sharedhelper.SharedHelper;
+import com.ecdial.utils.InternetConnection.InternetConnectionInterface;
+import com.ecdial.utils.InternetConnection.InternetConnectivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -66,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId()==R.id.category){
-                    startActivity(new Intent(MainActivity.this, AllCategoryActivity.class));
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AllCategoryFragment()).commit();
                     drawerlayout.closeDrawer(GravityCompat.START);
 
 
@@ -114,6 +106,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             }
         });
 
+
+        InternetConnectionInterface connectivity = new InternetConnectivity();
+        if (connectivity.isConnected(getApplicationContext())) {
+            if (savedInstanceState==null){
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFrag()).commit();
+            }
+        } else {
+
+
+            Toast.makeText(this, "Not connected to internet!!!", Toast.LENGTH_SHORT).show();
+
+        }
+
+
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFrag()).commit();
         }
@@ -127,9 +134,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         switch (item.getItemId()) {
 
+            case R.id.nav_shop:
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFrag()).commit();
+                drawerlayout.closeDrawer(GravityCompat.START);
+                break;
+
+
             case R.id.nav_cat:
 
-                startActivity(new Intent(MainActivity.this, AllCategoryActivity.class));
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AllCategoryFragment()).commit();
                 drawerlayout.closeDrawer(GravityCompat.START);
                 break;
 
