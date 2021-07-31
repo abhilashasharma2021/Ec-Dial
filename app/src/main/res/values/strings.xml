@@ -45,4 +45,9 @@
     <string name="all_brands">All Brands</string>
     <string name="submit">Submit</string>
     <string name="upcoming">Upcoming</string>
+    <string name="popular_brands">Popular Brands</string>
+    <string name="top_offer">Top Offer</string>
+    <string name="all_n_category">All \n Category</string>
+    <string name="search_for_products">Search for products</string>
+    <string name="new_arrivals">New Arrivals</string>
 </resources>

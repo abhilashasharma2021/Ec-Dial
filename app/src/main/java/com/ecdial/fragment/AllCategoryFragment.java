@@ -80,7 +80,7 @@ public class AllCategoryFragment extends Fragment {
                         dialog.hideDialog();
                         if (!response.getData().isEmpty()){
                             binding.rvCat.setHasFixedSize(true);
-                            layoutManager = new GridLayoutManager(getActivity(),2, RecyclerView.VERTICAL, false);
+                            layoutManager = new GridLayoutManager(getActivity(),3, RecyclerView.VERTICAL, false);
                             binding.rvCat.setLayoutManager(layoutManager);
                             ShowAllCategoryAdapter adapter= new ShowAllCategoryAdapter(getActivity(), response.getData());
                             binding.rvCat.setAdapter(adapter);

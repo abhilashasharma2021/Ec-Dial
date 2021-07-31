@@ -6,10 +6,162 @@
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFrag">
 
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/purple_200">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/menublue"
+                app:tint="@color/purple_200" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:src="@drawable/logo" />
+
+
+        <ImageView
+            android:id="@+id/ivNoti"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/ivCart"
+            android:padding="3dp"
+            android:src="@drawable/bell"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivCart"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="3dp"
+            android:src="@drawable/cart"
+            app:tint="@color/white" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ivCart"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:padding="4dp"
+                    android:src="@drawable/search" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:fontFamily="@font/ralewayregular"
+                    android:gravity="center"
+                    android:hint="@string/search_for_products"
+                    android:maxLength="100"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_light"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlMain">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menuCat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/list"
+                app:tint="@color/purple_200" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuCat"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ralewaymedium"
+            android:text="@string/all_n_category"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/menuCat" />
+
+
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlNew">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,168 +170,16 @@
 
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:background="@color/purple_200">
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/menu"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="15dp">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="25dp"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:padding="3dp"
-                        android:src="@drawable/menublue"
-                        app:tint="@color/purple_200" />
-
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/white"
-                    android:padding="3dp"
-                    android:src="@drawable/logo" />
-
-
-                <ImageView
-                    android:id="@+id/ivNoti"
-                    android:layout_width="35dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_toLeftOf="@+id/ivCart"
-                    android:padding="3dp"
-                    android:src="@drawable/bell"
-                    app:tint="@color/white" />
-
-                <ImageView
-                    android:id="@+id/ivCart"
-                    android:layout_width="35dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:padding="3dp"
-                    android:src="@drawable/cart"
-                    app:tint="@color/white" />
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_below="@+id/ivCart"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="15dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/ivSearch"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="15dp"
-                            android:padding="4dp"
-                            android:src="@drawable/search" />
-
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:background="@null"
-                            android:fontFamily="@font/robotoregular"
-                            android:gravity="center"
-                            android:hint="Search for products"
-                            android:maxLength="100"
-                            android:singleLine="true"
-                            android:textColor="@color/grey_light"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-
-
-                </com.google.android.material.card.MaterialCardView>
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/menuCat"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="15dp"
-                    app:cardBackgroundColor="@color/purple_200"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:padding="3dp"
-                        android:src="@drawable/menublue"
-                        app:tint="@color/white" />
-
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-                <TextView
-                    android:id="@+id/tx"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/menuCat"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/robotoregular"
-                    android:text="All \n Category"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvCat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/menuCat" />
-
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/orange_light">
-
-                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     app:cardCornerRadius="6dp"
                     app:cardElevation="5dp">
 
@@ -206,36 +206,47 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@color/cart">
 
                     <TextView
                         android:id="@+id/txTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="25dp"
-                        android:fontFamily="@font/robotobold"
-                        android:text="Brand"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/ralewayeemibold"
+                        android:text="@string/popular_brands"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
+                    <ImageView
+                        android:id="@+id/ivAllBrand"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:padding="3dp"
+                        android:src="@drawable/arrowright"
+                        app:tint="@color/purple_200" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btViewBrand"
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_height="45dp"
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="15dp"
                         android:backgroundTint="@color/orange"
                         android:fontFamily="@font/robotoregular"
                         android:text="View All"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:visibility="gone" />
 
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -243,10 +254,166 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txTitle"
-                        android:layout_marginTop="20dp" />
+                        android:layout_marginTop="10dp" />
 
 
                 </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tx4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ralewayeemibold"
+                    android:text="Deals of the day"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/txNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/ralewayeemibold"
+                        android:text="See all deals"
+                        android:textColor="@color/purple_200"
+                        android:textSize="12dp" />
+
+
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tx4"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_imag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:gravity="center"
+                                    android:background="@drawable/circlered"
+                                    android:id="@+id/imageAnim"
+                                    android:layout_height="40dp">
+                                </ImageView>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/txt_disPrect"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/robotobold"
+                                        android:textColor="@color/white"
+                                        android:text="0"/>
+                                    <TextView
+                                        android:layout_toRightOf="@+id/txt_disPrect"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/robotobold"
+                                        android:textColor="@color/white"
+                                        android:text="%"/>
+
+
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+
+
+                            <ImageView
+                                android:layout_width="75dp"
+                                android:background="@drawable/mobile"
+                                android:id="@+id/ivDeal"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="75dp">
+                            </ImageView>
+
+
+                            <TextView
+                                android:id="@+id/txDealName"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivDeal"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/ralewayregular"
+                                android:text="Oppo 0179M"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txDealName"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/txDealPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:text="₹500"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+                </RelativeLayout>
+
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -256,10 +423,10 @@
                         android:id="@+id/tx2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="25dp"
-                        android:fontFamily="@font/robotobold"
-                        android:text="Offer"
+                        android:fontFamily="@font/ralewayeemibold"
+                        android:text="@string/top_offer"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -282,10 +449,233 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tx2"
-                        android:layout_marginTop="20dp" />
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone" />
 
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tx2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivOffer"
+                                android:layout_width="150dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/fashion"></ImageView>
+
+
+                            <TextView
+                                android:id="@+id/txOfferName"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivOffer"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/ralewayregular"
+                                android:text="Dresses and Gowns"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txOfferName"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/txOfferPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:text="₹500"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/txSellPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_toEndOf="@+id/txOfferPrice"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:text="700"
+                                    android:textColor="@color/grey_light"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/txOffPercent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txOfferPrice"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:text="Upto 5% off"
+                                    android:textColor="@color/green"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#dbdbdb" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txArrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/ralewayeemibold"
+                    android:text="@string/new_arrivals"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivAllArrival"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:padding="3dp"
+                    android:src="@drawable/arrowright"
+                    app:tint="@color/purple_200" />
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tx2"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                       android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardBackgroundColor="@color/viewgrey"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivNew"
+                                android:layout_width="150dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/fashion"/>
+
+
+                            <TextView
+                                android:id="@+id/txNewName"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivNew"
+                                android:gravity="center"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/ralewayregular"
+                                android:text="Dresses and Gowns"
+                                android:textColor="@color/purple_200"
+                                android:textSize="13sp" />
+
+
+
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardBackgroundColor="@color/viewgrey"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivNew1"
+                                android:layout_width="150dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/fashion"/>
+
+
+                            <TextView
+                                android:id="@+id/txNewName1"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivNew1"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/ralewayregular"
+                                android:text="Dresses and Gowns"
+                                android:textColor="@color/purple_200"
+                                android:textSize="13sp" />
+
+
+
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+
 
 
 
@@ -298,9 +688,9 @@
                         android:id="@+id/tx1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="25dp"
-                        android:fontFamily="@font/robotobold"
+                        android:fontFamily="@font/ralewayeemibold"
                         android:text="Upcoming"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
@@ -309,7 +699,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btUpcoming"
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_height="45dp"
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="15dp"
@@ -324,12 +714,127 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tx1"
-                        android:layout_marginTop="20dp" />
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_below="@+id/tx1"
+                        android:orientation="horizontal">
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="180dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/ivUpcoming"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/fashion"></ImageView>
+
+
+                                <TextView
+                                    android:id="@+id/txUpcomeName"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ivUpcoming"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/ralewayregular"
+                                    android:text="Dresses and Gowns"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+                                <TextView
+                                    android:id="@+id/txUpto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_below="@+id/txUpcomeName"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:text="Upto 5% off"
+                                    android:textColor="@color/green"
+                                    android:textSize="13sp" />
+
+
+
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="180dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/ivUpcoming1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/fashion"></ImageView>
+
+
+                                <TextView
+                                    android:id="@+id/txUpcomeName1"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ivUpcoming1"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/ralewayregular"
+                                    android:text="Dresses and Gowns"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/txUpto1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_below="@+id/txUpcomeName1"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:text="Upto 5% off"
+                                    android:textColor="@color/green"
+                                    android:textSize="13sp" />
+
+
+
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+                    </LinearLayout>
+
+
 
 
                 </RelativeLayout>
-
-
 
 
             </LinearLayout>

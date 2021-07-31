@@ -6,6 +6,95 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         app:cardCornerRadius="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardElevation="5dp"
+        android:layout_below="@+id/txTitle"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="150dp"
+                android:src="@drawable/fashion"
+                android:scaleType="centerInside"
+                android:id="@+id/ivOffer"
+                android:layout_centerHorizontal="true"
+                android:layout_height="120dp">
+            </ImageView>
+
+
+
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/ivOffer"
+                android:id="@+id/txOfferName"
+                android:fontFamily="@font/ralewayregular"
+                android:text="Dresses and Gowns" />
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txOfferName"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/txOfferPrice"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="₹500" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_light"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/txOfferPrice"
+                    android:id="@+id/txSellPrice"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="700" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:textSize="13sp"
+                    android:layout_below="@+id/txOfferPrice"
+                    android:id="@+id/txOffPercent"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Upto 5% off" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:visibility="gone"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -36,13 +125,6 @@
                     android:layout_height="150dp">
                 </ImageView>
             </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-
-
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"

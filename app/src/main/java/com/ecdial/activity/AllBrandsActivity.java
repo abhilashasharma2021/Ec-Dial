@@ -76,7 +76,7 @@ public class AllBrandsActivity extends AppCompatActivity {
 
                         if (!response.getData().isEmpty()) {
                             rvBrands.setHasFixedSize(true);
-                            layoutManager = new GridLayoutManager(AllBrandsActivity.this, 2, RecyclerView.VERTICAL, false);
+                            layoutManager = new GridLayoutManager(AllBrandsActivity.this, 3, RecyclerView.VERTICAL, false);
                             rvBrands.setLayoutManager(layoutManager);
                             ShowAllBrandsAdapter adapter = new ShowAllBrandsAdapter(AllBrandsActivity.this, response.getData());
                             rvBrands.setAdapter(adapter);

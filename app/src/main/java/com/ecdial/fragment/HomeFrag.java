@@ -4,11 +4,13 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -72,6 +74,18 @@ public class HomeFrag extends Fragment {
         view = binding.getRoot();
         context = getActivity();
 
+
+        AnimationDrawable animation = new AnimationDrawable();
+        animation.addFrame(context.getResources().getDrawable(R.drawable.greencircle), 100);
+        animation.addFrame(context.getResources().getDrawable(R.drawable.circlered), 500);
+        animation.addFrame(context.getResources().getDrawable(R.drawable.circleyellow), 300);
+        animation.setOneShot(false);
+        binding.imageAnim.setBackgroundDrawable(animation);
+
+        // start the animation!
+        animation.start();
+
+
         binding.menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +103,7 @@ public class HomeFrag extends Fragment {
         });
 
 
-        binding.btViewBrand.setOnClickListener(new View.OnClickListener() {
+        binding.ivAllBrand.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), AllBrandsActivity.class));
@@ -112,7 +126,7 @@ public class HomeFrag extends Fragment {
         binding.imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM);
         binding.imageSlider.setSliderTransformAnimation(SliderAnimations.CUBEOUTROTATIONTRANSFORMATION);
         binding.imageSlider.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-        binding.imageSlider.setIndicatorSelectedColor(Color.WHITE);
+        binding.imageSlider.setIndicatorSelectedColor(getResources().getColor(R.color.orange));
         binding.imageSlider.setIndicatorUnselectedColor(Color.GRAY);
         binding.imageSlider.setScrollTimeInSec(3);
         binding.imageSlider.startAutoCycle();
@@ -125,8 +139,8 @@ public class HomeFrag extends Fragment {
 
         show_Category();
         showBanner();
-        show_Upcoming();
-        show_Offers();
+       // show_Upcoming();
+       // show_Offers();
 
         onBack(view);
         show_Brands();
@@ -168,8 +182,9 @@ public class HomeFrag extends Fragment {
 
 
     private void show_Category() {
-
-
+   /*     CustomDialog dialog = new CustomDialog();
+        dialog.showDialog(R.layout.progress_layout, getActivity());
+*/
         AndroidNetworking.post(APIDATA.BASE_URL)
                 .addQueryParameter("Auth", "eyJhdXRoIjp7ImRpZ2VzdCI6IlpEUXdZVGt5WmpVeU1EVm1NelJsT1dReE1qazFZbUV5TTJJM1l6ZzFZVFZqTTJSak5ERXlPUT09IiwidXNlcm5hbWUiOiJ0cGluX2FuZHJvaWRfZ3BzdXNlciIsInRpbWVzdGFtcCI6IjIwMTctMTItMDggMTI6Mzc6MTgifX0=")
                 .addQueryParameter("Case", show_category)
@@ -179,12 +194,22 @@ public class HomeFrag extends Fragment {
                     @Override
                     public void onResponse(AllCategoryResponce response) {
                         Log.e("check", "response: " + response.getData().get(0).getCategoryName());
-
+                      //  dialog.hideDialog();
                         if (!response.getData().isEmpty()) {
+                            ArrayList<AllCategoryResponce.Datum> catList = new ArrayList<>();
+                            if (response.getData().size()>4){
+
+                                for (int i = 0; i < 4; i++) {
+
+                                    catList.add(response.getData().get(i));
+
+                                }
+                            }
+
                             binding.rvCat.setHasFixedSize(true);
                             layoutManager = new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false);
                             binding.rvCat.setLayoutManager(layoutManager);
-                            CatHomeAdapter adapter = new CatHomeAdapter(getActivity(), response.getData());
+                            CatHomeAdapter adapter = new CatHomeAdapter(getActivity(), catList);
                             binding.rvCat.setAdapter(adapter);
                         }
 
@@ -192,7 +217,7 @@ public class HomeFrag extends Fragment {
 
                     @Override
                     public void onError(ANError anError) {
-
+                       // dialog.hideDialog();
                     }
                 });
 
@@ -200,8 +225,7 @@ public class HomeFrag extends Fragment {
     }
 
     private void show_Brands() {
-        CustomDialog dialog = new CustomDialog();
-        dialog.showDialog(R.layout.progress_layout, getActivity());
+
         AndroidNetworking.post(APIDATA.BASE_URL)
                 .addQueryParameter("Auth", "eyJhdXRoIjp7ImRpZ2VzdCI6IlpEUXdZVGt5WmpVeU1EVm1NelJsT1dReE1qazFZbUV5TTJJM1l6ZzFZVFZqTTJSak5ERXlPUT09IiwidXNlcm5hbWUiOiJ0cGluX2FuZHJvaWRfZ3BzdXNlciIsInRpbWVzdGFtcCI6IjIwMTctMTItMDggMTI6Mzc6MTgifX0=")
                 .addQueryParameter("Case", show_brands)
@@ -210,19 +234,19 @@ public class HomeFrag extends Fragment {
                 .getAsObject(AllBrandsResponce.class, new ParsedRequestListener<AllBrandsResponce>() {
                     @Override
                     public void onResponse(AllBrandsResponce response) {
-                        dialog.hideDialog();
+
                         Log.e("AllBrandsActivity", "onResponse: " + response.getData().get(0).getBrandName());
                         if (!response.getData().isEmpty()) {
                             ArrayList<AllBrandsResponce.Datum> brandList = new ArrayList<>();
-                            if (response.getData().size() > 4) {
-                                for (int i = 0; i < 4; i++) {
+                            if (response.getData().size() > 6) {
+                                for (int i = 0; i < 6; i++) {
 
                                     brandList.add(response.getData().get(i));
 
                                 }
 
                                 binding.rvBrand.setHasFixedSize(true);
-                                layoutManager = new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false);
+                                layoutManager = new GridLayoutManager(getActivity(), 3,RecyclerView.VERTICAL, false);
                                 binding.rvBrand.setLayoutManager(layoutManager);
                                 BrandsHomeAdapter adapter = new BrandsHomeAdapter(getActivity(), brandList);
                                 binding.rvBrand.setAdapter(adapter);
@@ -237,7 +261,7 @@ public class HomeFrag extends Fragment {
                     @Override
                     public void onError(ANError anError) {
                         Log.e("AllBrandsActivity", "onError: " + anError);
-                        dialog.hideDialog();
+
                     }
                 });
 

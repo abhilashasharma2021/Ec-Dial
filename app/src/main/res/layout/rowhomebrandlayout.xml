@@ -6,32 +6,34 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
         android:layout_marginBottom="15dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_below="@+id/txTitle"
         android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
+            <ImageView
+                android:layout_width="150dp"
+                android:src="@drawable/fashion"
+                android:scaleType="centerInside"
+                android:id="@+id/ivBrand"
+                android:layout_height="100dp">
+            </ImageView>
 
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 app:cardCornerRadius="10dp"
                 android:id="@+id/card"
+                android:visibility="gone"
                 android:layout_margin="15dp"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="150dp"
-                    android:src="@drawable/fashion"
-                    android:scaleType="fitXY"
-                    android:id="@+id/ivBrand"
-                    android:layout_height="150dp">
-                </ImageView>
+
             </com.google.android.material.card.MaterialCardView>
 
 
@@ -45,14 +47,12 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="13sp"
-                android:layout_centerHorizontal="true"
                 android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@+id/card"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/ivBrand"
                 android:textAlignment="center"
                 android:id="@+id/txBrandName"
-                android:fontFamily="@font/robotoregular"
+                android:fontFamily="@font/ralewayregular"
                 android:text="Dresses and Gowns" />
 
         </RelativeLayout>
