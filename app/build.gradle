@@ -86,6 +86,7 @@ dependencies {
     //animation
     implementation 'com.github.mohammadatif:Animatoo:master'
 
-
+//shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
 
 }

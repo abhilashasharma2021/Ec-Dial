@@ -36,18 +36,22 @@ public class BrandsHomeAdapter extends RecyclerView.Adapter<BrandsHomeAdapter.My
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         AllBrandsResponce.Datum modelObject = brandlist.get(position);
-        holder.rowhomebrandlayoutBinding.txBrandName.setText(modelObject.getBrandName());
+
+        if (!modelObject.equals("")){
+            holder.rowhomebrandlayoutBinding.txBrandName.setText(modelObject.getBrandName());
 
 
 
-       try {
-            Glide.with(mContext).load(modelObject.getPicture())
-                    .placeholder(R.drawable.fashion).override(250, 250)
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(holder.rowhomebrandlayoutBinding.ivBrand);
-        } catch (Exception e) {
+            try {
+                Glide.with(mContext).load(modelObject.getPicture())
+                        .placeholder(R.drawable.fashion).override(250, 250)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .into(holder.rowhomebrandlayoutBinding.ivBrand);
+            } catch (Exception e) {
 
+            }
         }
+
 
 
 

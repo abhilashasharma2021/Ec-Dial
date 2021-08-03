@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.AllNewArrivalsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/purple_200"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivBack"
+                android:padding="3dp"
+                android:src="@drawable/back"
+                app:tint="@color/white"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/ivBack"
+                android:fontFamily="@font/ralewayeemibold"
+                android:text="@string/new_arrivals"
+                android:layout_marginLeft="10dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivSearch"
+                android:padding="3dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/search"
+                android:layout_toLeftOf="@+id/ivCart"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/white" />
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivCart"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:src="@drawable/cart"
+                app:tint="@color/white"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp" />
+
+
+        </RelativeLayout>
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerView"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            shimmer:duration="800">
+
+            <!-- Adding 7 rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/shimmer_allnewarrival_layout" />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+        <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvArrivals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+        </com.baoyz.widget.PullRefreshLayout>
+
+    </LinearLayout>
+</RelativeLayout>

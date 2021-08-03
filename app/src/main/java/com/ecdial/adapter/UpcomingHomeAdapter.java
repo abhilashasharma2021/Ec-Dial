@@ -39,7 +39,7 @@ public class UpcomingHomeAdapter extends RecyclerView.Adapter<UpcomingHomeAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         AllUpcomingResponce.Datum modelObject = upcomingList.get(position);
         holder.rowupcominghomelayoutBinding.txBrandName.setText(modelObject.getProductName());
-        holder.rowupcominghomelayoutBinding.txSellPrice.setText(modelObject.getProductVariantSellingPrice());
+               holder.rowupcominghomelayoutBinding.txSellPrice.setText(modelObject.getProductVariantSellingPrice());
         holder.rowupcominghomelayoutBinding.txSellPrice.setPaintFlags( holder.rowupcominghomelayoutBinding.txSellPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
         holder.rowupcominghomelayoutBinding.txOfferPrice.setText("₹"+modelObject.getProductVariantOfferPrice());

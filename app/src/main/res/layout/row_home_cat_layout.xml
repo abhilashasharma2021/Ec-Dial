@@ -3,44 +3,39 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        app:cardElevation="5dp"
         android:orientation="vertical">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="60dp"
+        android:src="@drawable/fashion"
+        android:id="@+id/ivCat"
+        android:layout_height="60dp">
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:id="@+id/txCatName"
+        android:fontFamily="@font/ralewaymedium"
+        android:text="Fashion" />
 
 
-        <ImageView
-            android:layout_width="60dp"
-            android:src="@drawable/fashion"
-            android:id="@+id/ivCat"
-            android:layout_height="60dp">
-        </ImageView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            android:layout_marginTop="3dp"
-            android:gravity="center"
-            android:id="@+id/txCatName"
-            android:fontFamily="@font/ralewaymedium"
-            android:text="Fashion" />
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:padding="10dp"
-            android:visibility="gone"
-            app:cardCornerRadius="40dp">
+</LinearLayout>
 
 
 
-
-        </com.google.android.material.card.MaterialCardView>
-
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

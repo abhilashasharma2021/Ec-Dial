@@ -25,7 +25,7 @@ import com.ecdial.utils.APIDATA;
 
 import java.util.ArrayList;
 
-import static com.ecdial.utils.APIDATA.show_upcoming;
+
 
 public class AllUpcomingActivity extends AppCompatActivity {
 ActivityAllUpcomingBinding binding;
@@ -61,7 +61,7 @@ RecyclerView.LayoutManager layoutManager;
         dialog.showDialog(R.layout.progress_layout, AllUpcomingActivity.this);
         AndroidNetworking.post(APIDATA.BASE_URL)
                 .addQueryParameter("Auth", "eyJhdXRoIjp7ImRpZ2VzdCI6IlpEUXdZVGt5WmpVeU1EVm1NelJsT1dReE1qazFZbUV5TTJJM1l6ZzFZVFZqTTJSak5ERXlPUT09IiwidXNlcm5hbWUiOiJ0cGluX2FuZHJvaWRfZ3BzdXNlciIsInRpbWVzdGFtcCI6IjIwMTctMTItMDggMTI6Mzc6MTgifX0=")
-                .addQueryParameter("Case", show_upcoming)
+               /* .addQueryParameter("Case", show_upcoming)*/
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsObject(AllUpcomingResponce.class, new ParsedRequestListener<AllUpcomingResponce>() {

@@ -39,17 +39,21 @@ public class CatHomeAdapter extends RecyclerView.Adapter<CatHomeAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         AllCategoryResponce.Datum modelObject = catList.get(position);
-        holder.rowHomeCatLayoutBinding.txCatName.setText(modelObject.getCategoryName());
+
+        if (!modelObject.equals("")){
+            holder.rowHomeCatLayoutBinding.txCatName.setText(modelObject.getCategoryName());
 
 
-        try {
-            Glide.with(mContext).load(modelObject.getIcon())
-                    .placeholder(R.drawable.fashion).override(250, 250)
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(holder.rowHomeCatLayoutBinding.ivCat);
-        } catch (Exception e) {
+            try {
+                Glide.with(mContext).load(modelObject.getIcon())
+                        .placeholder(R.drawable.fashion).override(250, 250)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .into(holder.rowHomeCatLayoutBinding.ivCat);
+            } catch (Exception e) {
 
+            }
         }
+
 
 
 
